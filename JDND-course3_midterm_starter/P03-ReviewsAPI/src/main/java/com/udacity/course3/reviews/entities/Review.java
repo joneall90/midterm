@@ -12,7 +12,7 @@ public class Review {
     private Integer commentId;
 
     @ManyToOne
-    private String productId;
+    private Product product;
 
     private String review;
 
@@ -25,12 +25,12 @@ public class Review {
         this.commentId = commentId;
     }
 
-    public String getProductId() {
-        return productId;
+    public Product getProductId() {
+        return product;
     }
 
-    public void setProductId(String productId) {
-        this.productId = productId;
+    public void setProductId(Product productId) {
+        this.product = productId;
     }
 
     public String getReview() {

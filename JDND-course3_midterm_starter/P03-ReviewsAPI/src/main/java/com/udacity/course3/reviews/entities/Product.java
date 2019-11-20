@@ -10,10 +10,15 @@ public class Product {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int productId;
+    private Integer productId;
     private String productName;
     @OneToMany(mappedBy = "product")
     private List<Review> reviews = new ArrayList<>();
+
+    public Product() {
+
+    }
+
 
     public int getProductId() {
         return productId;
@@ -39,5 +44,4 @@ public class Product {
         this.reviews = reviews;
     }
 
-    public void Product(){}
 }
